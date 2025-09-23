@@ -107,6 +107,32 @@ ul {
   padding: 24px 0px;
 }
 /* botões (links) */
+html {
+  --text-color: white;
+  --bg-url: #f2c780;
+  --stroke-color: rgba(0, 0, 0, 0.2); 
+  --suface-color: #f2c780; /* mesma cor do fundo */
+  --suface-color-hover: #e5b75c; /* tom mais escuro no hover */
+  --highlight-color: rgba(255, 255, 255, 0.3);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: #f2c780;
+  --stroke-color: rgba(0, 0, 0, 0.3);
+  --suface-color: #f2c780; /* mesma cor do fundo */
+  --suface-color-hover: #d19c47; /* hover mais forte no claro */
+  --highlight-color: rgba(0, 0, 0, 0.15);
+  --switch-bg-url: url(./assets/assets/sun.svg);
+}
+
+body {
+  background: var(--bg-url);
+  height: 100vh;
+}
+
+/* botões (links) */
 ul li a {
   display: flex;
   align-items: center;
@@ -114,22 +140,21 @@ ul li a {
 
   padding: 16px 24px;
 
-  background: var(--stroke-coloruface-color);
-  border: 1px solid var(--stroke-color);
+  background: var(--suface-color);
+  border: 2px solid var(--stroke-color);
   border-radius: 8px;
 
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--text-color);
 
-  transition: background 0.2s, border 0.2s;
+  transition: background 0.2s, border 0.2s, color 0.2s;
 }
 
 ul li a:hover {
   background: var(--suface-color-hover);
-  border: 1.5px solid var(--text-color);
+  border: 2px solid var(--text-color);
+  color: #fff; /* garante contraste no hover */
 }
 
 /*social links*/
@@ -160,31 +185,32 @@ footer {
   font-size: 14px;
 }
 
-/*media queries*/
 html {
   --text-color: white;
-  --bg-url: linear-gradient(180deg, #E6CFC3 0%, #F5D5A2 100%);
+  --bg-url: #f2c780;
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --suface-color: rgba(230, 207, 195, 0.4); /* nude translúcido */
-  --suface-color-hover: rgba(245, 213, 162, 0.6); /* bege mais intenso */
+  --suface-color: #d19c47; /* cor dos botões */
+  --suface-color-hover: #e5b75c; /* tom mais claro para hover */
   --highlight-color: rgba(255, 255, 255, 0.3);
   --switch-bg-url: url(./assets/assets/moon-stars.svg);
 }
 
 .light {
   --text-color: black;
-  --bg-url: linear-gradient(180deg, #E6CFC3 0%, #F5D5A2 100%);
+  --bg-url: #f2c780;
   --stroke-color: rgba(0, 0, 0, 0.4);
-  --suface-color: rgba(230, 207, 195, 0.5);
-  --suface-color-hover: rgba(245, 213, 162, 0.7);
+  --suface-color: #d19c47; /* botões no modo claro também */
+  --suface-color-hover: #e5b75c;
   --highlight-color: rgba(0, 0, 0, 0.15);
   --switch-bg-url: url(./assets/assets/sun.svg);
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover;
+  background: var(--bg-url);
   height: 100vh;
 }
+
+
 
 /*animations */
 @keyframes slide-in {
