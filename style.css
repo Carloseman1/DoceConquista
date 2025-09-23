@@ -157,6 +157,11 @@ ul li a:hover {
   color: #fff; /* garante contraste no hover */
 }
 
+/* social links */
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
 /*social links*/
 #social-links {
   display: flex;
@@ -186,28 +191,29 @@ footer {
 }
 
 html {
-  --text-color: white;
-  --bg-url: #f2c780;
-  --stroke-color: rgba(255, 255, 255, 0.5);
-  --suface-color: #d19c47; /* cor dos botões */
-  --suface-color-hover: #e5b75c; /* tom mais claro para hover */
-  --highlight-color: rgba(255, 255, 255, 0.3);
+  --text-color: #6e4a2e; /* marrom escuro para o texto */
+  --bg-url: #e4d4c8; /* bege claro para o fundo */
+  --stroke-color: rgba(110, 74, 46, 0.5); /* borda sutil */
+  --suface-color: #b99b86; /* cor dos botões (marrom médio) */
+  --suface-color-hover: #6e4a2e; /* hover mais escuro */
+  --highlight-color: rgba(110, 74, 46, 0.2); /* efeito hover em ícones */
   --switch-bg-url: url(./assets/assets/moon-stars.svg);
 }
 
 .light {
-  --text-color: black;
-  --bg-url: #f2c780;
-  --stroke-color: rgba(0, 0, 0, 0.4);
-  --suface-color: #d19c47; /* botões no modo claro também */
-  --suface-color-hover: #e5b75c;
-  --highlight-color: rgba(0, 0, 0, 0.15);
+  --text-color: #6e4a2e; /* mantemos o texto escuro */
+  --bg-url: #e4d4c8; /* fundo claro */
+  --stroke-color: rgba(110, 74, 46, 0.3);
+  --suface-color: #b99b86; /* botões no modo claro */
+  --suface-color-hover: #6e4a2e; /* hover dos botões */
+  --highlight-color: rgba(110, 74, 46, 0.15);
   --switch-bg-url: url(./assets/assets/sun.svg);
 }
 
 body {
   background: var(--bg-url);
   height: 100vh;
+  color: var(--text-color);
 }
 
 
