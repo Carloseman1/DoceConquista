@@ -163,4 +163,9 @@ footer {
     margin: 0;
     border-radius: 0;
   }
+
+  .highlighted img {
+    margin-left: 25px;
+    max-width: 100px;
+  }
 }
