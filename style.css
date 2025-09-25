@@ -33,6 +33,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, 100%);
   animation: slide-up 1s ease-out forwards;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--btn-color) var(--bg-url--container);
 }
 
 .links {
@@ -128,18 +131,20 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 7%;
 }
 
 .highlighted article {
   max-width: 300px;
-  max-height: 150px;
   font-style: italic;
 }
 
 .highlighted img {
   margin-left: 50px;
   border-radius: 12px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 @keyframes slide-up {
