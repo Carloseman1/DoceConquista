@@ -61,6 +61,10 @@ body {
   cursor: pointer;
 }
 
+.link-whatsapp:hover {
+  cursor: pointer;
+}
+
 .btn-whatsapp {
   color: #fff !important;
   background: var(--btn-color-whatsapp) !important;
